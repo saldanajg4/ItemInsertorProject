@@ -1,0 +1,2 @@
+ItemInsertor.Core.Tests.ItemInsertorRequestProcessorTests.ShouldReturnItemInsertingResultWithRequestValues
+ItemInsertor.Core.Tests.ItemInsertorRequestProcessorTests.ShouldReturnExceptionIfRequestIsNull

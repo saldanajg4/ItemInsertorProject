@@ -1,0 +1,9 @@
+D:\users\gabriel\vsprojects\ItemInsertorProject\ItemInsertor.Core\bin\Debug\netstandard2.0\ItemInsertor.Core.deps.json
+D:\users\gabriel\vsprojects\ItemInsertorProject\ItemInsertor.Core\bin\Debug\netstandard2.0\ItemInsertor.Core.dll
+D:\users\gabriel\vsprojects\ItemInsertorProject\ItemInsertor.Core\bin\Debug\netstandard2.0\ItemInsertor.Core.pdb
+D:\users\gabriel\vsprojects\ItemInsertorProject\ItemInsertor.Core\obj\Debug\netstandard2.0\ItemInsertor.Core.csprojAssemblyReference.cache
+D:\users\gabriel\vsprojects\ItemInsertorProject\ItemInsertor.Core\obj\Debug\netstandard2.0\ItemInsertor.Core.AssemblyInfoInputs.cache
+D:\users\gabriel\vsprojects\ItemInsertorProject\ItemInsertor.Core\obj\Debug\netstandard2.0\ItemInsertor.Core.AssemblyInfo.cs
+D:\users\gabriel\vsprojects\ItemInsertorProject\ItemInsertor.Core\obj\Debug\netstandard2.0\ItemInsertor.Core.csproj.CoreCompileInputs.cache
+D:\users\gabriel\vsprojects\ItemInsertorProject\ItemInsertor.Core\obj\Debug\netstandard2.0\ItemInsertor.Core.dll
+D:\users\gabriel\vsprojects\ItemInsertorProject\ItemInsertor.Core\obj\Debug\netstandard2.0\ItemInsertor.Core.pdb

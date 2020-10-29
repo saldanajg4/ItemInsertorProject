@@ -902,14 +902,14 @@
           "build/netcoreapp1.0/xunit.runner.visualstudio.props": {}
         }
       },
-      "ItemInsertor.Core/1.0.0": {
+      "DeskBooker.Core/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "compile": {
-          "bin/placeholder/ItemInsertor.Core.dll": {}
+          "bin/placeholder/DeskBooker.Core.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ItemInsertor.Core.dll": {}
+          "bin/placeholder/DeskBooker.Core.dll": {}
         }
       }
     }
@@ -3469,15 +3469,15 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "ItemInsertor.Core/1.0.0": {
+    "DeskBooker.Core/1.0.0": {
       "type": "project",
-      "path": "../ItemInsertor.Core/ItemInsertor.Core.csproj",
-      "msbuildProject": "../ItemInsertor.Core/ItemInsertor.Core.csproj"
+      "path": "../DeskBooker.Core/DeskBooker.Core.csproj",
+      "msbuildProject": "../DeskBooker.Core/DeskBooker.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "ItemInsertor.Core >= 1.0.0",
+      "DeskBooker.Core >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "coverlet.collector >= 1.2.0",
       "xunit >= 2.4.0",
@@ -3491,11 +3491,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\users\\gabriel\\vsprojects\\ItemInsertorProject\\ItemInsertor.Core.Tests\\ItemInsertor.Core.Tests.csproj",
-      "projectName": "ItemInsertor.Core.Tests",
-      "projectPath": "d:\\users\\gabriel\\vsprojects\\ItemInsertorProject\\ItemInsertor.Core.Tests\\ItemInsertor.Core.Tests.csproj",
+      "projectUniqueName": "D:\\users\\gabriel\\vsprojects\\ItemInsertorProject\\DeskBooker.Core.Tests\\DeskBooker.Core.Tests.csproj",
+      "projectName": "DeskBooker.Core.Tests",
+      "projectPath": "D:\\users\\gabriel\\vsprojects\\ItemInsertorProject\\DeskBooker.Core.Tests\\DeskBooker.Core.Tests.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "d:\\users\\gabriel\\vsprojects\\ItemInsertorProject\\ItemInsertor.Core.Tests\\obj\\",
+      "outputPath": "D:\\users\\gabriel\\vsprojects\\ItemInsertorProject\\DeskBooker.Core.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3512,8 +3512,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "d:\\users\\gabriel\\vsprojects\\ItemInsertorProject\\ItemInsertor.Core\\ItemInsertor.Core.csproj": {
-              "projectPath": "d:\\users\\gabriel\\vsprojects\\ItemInsertorProject\\ItemInsertor.Core\\ItemInsertor.Core.csproj"
+            "D:\\users\\gabriel\\vsprojects\\ItemInsertorProject\\DeskBooker.Core\\DeskBooker.Core.csproj": {
+              "projectPath": "D:\\users\\gabriel\\vsprojects\\ItemInsertorProject\\DeskBooker.Core\\DeskBooker.Core.csproj"
             }
           }
         }

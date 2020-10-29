@@ -1,0 +1,9 @@
+D:\users\gabriel\vsprojects\ItemInsertorProject\DeskBooker.Core\bin\Debug\netstandard2.0\DeskBooker.Core.deps.json
+D:\users\gabriel\vsprojects\ItemInsertorProject\DeskBooker.Core\bin\Debug\netstandard2.0\DeskBooker.Core.dll
+D:\users\gabriel\vsprojects\ItemInsertorProject\DeskBooker.Core\bin\Debug\netstandard2.0\DeskBooker.Core.pdb
+D:\users\gabriel\vsprojects\ItemInsertorProject\DeskBooker.Core\obj\Debug\netstandard2.0\DeskBooker.Core.csprojAssemblyReference.cache
+D:\users\gabriel\vsprojects\ItemInsertorProject\DeskBooker.Core\obj\Debug\netstandard2.0\DeskBooker.Core.AssemblyInfoInputs.cache
+D:\users\gabriel\vsprojects\ItemInsertorProject\DeskBooker.Core\obj\Debug\netstandard2.0\DeskBooker.Core.AssemblyInfo.cs
+D:\users\gabriel\vsprojects\ItemInsertorProject\DeskBooker.Core\obj\Debug\netstandard2.0\DeskBooker.Core.csproj.CoreCompileInputs.cache
+D:\users\gabriel\vsprojects\ItemInsertorProject\DeskBooker.Core\obj\Debug\netstandard2.0\DeskBooker.Core.dll
+D:\users\gabriel\vsprojects\ItemInsertorProject\DeskBooker.Core\obj\Debug\netstandard2.0\DeskBooker.Core.pdb

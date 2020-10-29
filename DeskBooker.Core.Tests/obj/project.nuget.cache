@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UTAZoDwm9P3Te1RB0FvTlHj7d4gIXbV/8/oXMcF+em+JSZ5Sj3IPv1RbDUy3VeMWKxjAyPnh2xdFwBNTOMF9BA==",
+  "dgSpecHash": "RBpzriqloe+PmY3II3d25mDbJ1LCVLt7fde0N68ao/lfhG8gLi+67THYE1myRwlmInB3biWg9hnUDja6i7UmiA==",
   "success": true,
-  "projectFilePath": "d:\\users\\gabriel\\vsprojects\\ItemInsertorProject\\ItemInsertor.Core.Tests\\ItemInsertor.Core.Tests.csproj",
+  "projectFilePath": "D:\\users\\gabriel\\vsprojects\\ItemInsertorProject\\DeskBooker.Core.Tests\\DeskBooker.Core.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",

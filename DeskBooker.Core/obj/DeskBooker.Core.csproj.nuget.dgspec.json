@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\users\\gabriel\\vsprojects\\ItemInsertorProject\\ItemInsertor.Core\\ItemInsertor.Core.csproj": {}
+    "D:\\users\\gabriel\\vsprojects\\ItemInsertorProject\\DeskBooker.Core\\DeskBooker.Core.csproj": {}
   },
   "projects": {
-    "d:\\users\\gabriel\\vsprojects\\ItemInsertorProject\\ItemInsertor.Core\\ItemInsertor.Core.csproj": {
+    "D:\\users\\gabriel\\vsprojects\\ItemInsertorProject\\DeskBooker.Core\\DeskBooker.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\users\\gabriel\\vsprojects\\ItemInsertorProject\\ItemInsertor.Core\\ItemInsertor.Core.csproj",
-        "projectName": "ItemInsertor.Core",
-        "projectPath": "d:\\users\\gabriel\\vsprojects\\ItemInsertorProject\\ItemInsertor.Core\\ItemInsertor.Core.csproj",
+        "projectUniqueName": "D:\\users\\gabriel\\vsprojects\\ItemInsertorProject\\DeskBooker.Core\\DeskBooker.Core.csproj",
+        "projectName": "DeskBooker.Core",
+        "projectPath": "D:\\users\\gabriel\\vsprojects\\ItemInsertorProject\\DeskBooker.Core\\DeskBooker.Core.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "d:\\users\\gabriel\\vsprojects\\ItemInsertorProject\\ItemInsertor.Core\\obj\\",
+        "outputPath": "D:\\users\\gabriel\\vsprojects\\ItemInsertorProject\\DeskBooker.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

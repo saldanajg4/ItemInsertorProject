@@ -1,19 +1,29 @@
 using System;
+using ItemInsertor.Core.DataInterface;
 using ItemInsertor.Core.Domain;
 
 namespace ItemInsertor.Core.Processor
 {
     public class ItemInsertorRequestProcessor
     {
-        public ItemInsertorRequestProcessor()
+        public IItemInsertRepository InsertRepository { get; }
+        public ItemInsertorRequestProcessor(IItemInsertRepository insertRepository)
         {
+            this.InsertRepository = insertRepository;
         }
 
         public InsertItemResult InsertItem(ItemInsertRequest request)
         {
-            if(request == null)
+            if (request == null)
                 throw new ArgumentNullException(nameof(request));
-            return new InsertItemResult{
+            InsertRepository.Save(new ItemInsert{
+                Sku = request.Sku,
+                Name = request.Name,
+                Price = request.Price,
+                Quantity = request.Quantity
+            });
+            return new InsertItemResult
+            {
                 Sku = request.Sku,
                 Name = request.Name,
                 Price = request.Price,

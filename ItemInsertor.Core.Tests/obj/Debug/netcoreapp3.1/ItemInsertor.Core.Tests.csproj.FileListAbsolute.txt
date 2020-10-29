@@ -96,3 +96,5 @@ d:\users\gabriel\vsprojects\ItemInsertorProject\ItemInsertor.Core.Tests\obj\Debu
 d:\users\gabriel\vsprojects\ItemInsertorProject\ItemInsertor.Core.Tests\obj\Debug\netcoreapp3.1\ItemInsertor.Core.Tests.genruntimeconfig.cache
 D:\users\gabriel\vsprojects\ItemInsertorProject\ItemInsertor.Core.Tests\bin\Debug\netcoreapp3.1\ItemInsertor.Core.dll
 D:\users\gabriel\vsprojects\ItemInsertorProject\ItemInsertor.Core.Tests\bin\Debug\netcoreapp3.1\ItemInsertor.Core.pdb
+D:\users\gabriel\vsprojects\ItemInsertorProject\ItemInsertor.Core.Tests\bin\Debug\netcoreapp3.1\Castle.Core.dll
+D:\users\gabriel\vsprojects\ItemInsertorProject\ItemInsertor.Core.Tests\bin\Debug\netcoreapp3.1\Moq.dll

@@ -6,11 +6,11 @@ namespace DeskBooker.Core.Processor
 {
     public class DeskBookingRequestProcessor
     {
-        private readonly IDeskBookingRepository repo;
+        private readonly IDeskBookingRepository deskBookingRepository;
 
-        public DeskBookingRequestProcessor(IDeskBookingRepository repo)
+        public DeskBookingRequestProcessor(IDeskBookingRepository deskBookingRepository)
         {
-            this.repo = repo;
+            this.deskBookingRepository = deskBookingRepository;
         }
 
         public BookDeskResult BookDesk(BookDeskRequest bookRequest)
@@ -18,6 +18,12 @@ namespace DeskBooker.Core.Processor
             if(bookRequest == null)
                 throw new ArgumentNullException(nameof(bookRequest));
 
+            deskBookingRepository.Save(new DeskBooking{
+                FistName = bookRequest.FistName,
+                LastName = bookRequest.LastName,
+                Email = bookRequest.Email,
+                BookingDate = bookRequest.BookingDate
+            });
             return new BookDeskResult{
                 FistName = bookRequest.FistName,
                 LastName = bookRequest.LastName,

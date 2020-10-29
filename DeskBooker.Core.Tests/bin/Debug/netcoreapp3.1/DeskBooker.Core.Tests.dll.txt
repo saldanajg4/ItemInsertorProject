@@ -1,2 +1,3 @@
 DeskBooker.Core.Tests.DeskBookingRequestProcessorTests.ShouldReturnBookDesKResult
 DeskBooker.Core.Tests.DeskBookingRequestProcessorTests.ShouldThrowExceptionWhenRequestIsNull
+DeskBooker.Core.Tests.DeskBookingRequestProcessorTests.ShouldSaveDeskBooking

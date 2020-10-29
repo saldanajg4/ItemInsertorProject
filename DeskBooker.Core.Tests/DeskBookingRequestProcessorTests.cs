@@ -64,8 +64,10 @@ namespace DeskBooker.Core.Tests
 
             //assert
             Assert.NotNull(savedDeskBooking);
-
-
+            Assert.Equal(request.FistName, savedDeskBooking.FistName);
+            Assert.Equal(request.LastName, savedDeskBooking.LastName);
+            Assert.Equal(request.Email, savedDeskBooking.Email);
+            Assert.Equal(request.BookingDate, savedDeskBooking.BookingDate);
         }
 
     }

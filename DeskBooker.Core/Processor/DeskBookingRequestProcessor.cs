@@ -1,13 +1,16 @@
 using System;
+using DeskBooker.Core.DataInterface;
 using DeskBooker.Core.Domain;
 
 namespace DeskBooker.Core.Processor
 {
     public class DeskBookingRequestProcessor
     {
-        public DeskBookingRequestProcessor()
+        private readonly IDeskBookingRepository repo;
+
+        public DeskBookingRequestProcessor(IDeskBookingRepository repo)
         {
-             
+            this.repo = repo;
         }
 
         public BookDeskResult BookDesk(BookDeskRequest bookRequest)

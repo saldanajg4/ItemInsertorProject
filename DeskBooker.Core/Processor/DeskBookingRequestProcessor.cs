@@ -15,16 +15,18 @@ namespace DeskBooker.Core.Processor
 
         public BookDeskResult BookDesk(BookDeskRequest bookRequest)
         {
-            if(bookRequest == null)
+            if (bookRequest == null)
                 throw new ArgumentNullException(nameof(bookRequest));
 
-            deskBookingRepository.Save(new DeskBooking{
-                FistName = bookRequest.FistName,
-                LastName = bookRequest.LastName,
-                Email = bookRequest.Email,
-                BookingDate = bookRequest.BookingDate
-            });
-            return new BookDeskResult{
+            deskBookingRepository.Save(CreateDeskBookDomain<DeskBooking>(bookRequest));
+            return CreateDeskBookDomain<BookDeskResult>(bookRequest);
+        }
+
+        //generic method to accept bookDeskRequest types
+        private static T CreateDeskBookDomain<T>(BookDeskRequest bookRequest) where T : DeskBookingBase, new()
+        {
+            return new T
+            {
                 FistName = bookRequest.FistName,
                 LastName = bookRequest.LastName,
                 Email = bookRequest.Email,

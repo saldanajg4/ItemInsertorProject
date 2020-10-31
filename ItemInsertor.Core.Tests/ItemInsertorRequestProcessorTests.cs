@@ -28,8 +28,8 @@ namespace ItemInsertor.Core.Tests
             _itemRepository = new Mock<IItemRepository>();
             itemInsertRepositoryMock = new Mock<IItemInsertRepository>();
             //how to test if item does not exist
-            _itemRepository.Setup(m => m.GetItem(_item.Name))
-                .Returns(_item);
+            // _itemRepository.Setup(m => m.GetItem(_item.Name))
+            //     .Returns(_item);
             _processor = new ItemInsertorRequestProcessor(itemInsertRepositoryMock.Object,
                 _itemRepository.Object);
         }
@@ -85,8 +85,13 @@ namespace ItemInsertor.Core.Tests
         //Mocking the IItemRepository when item exists then do not save
         [Fact]
         public void ShouldNotInsertIfItemFoundByName(){
-             _item = new Item{Name = request.Name};
+            //arrange
+             _item = new Item{Name = "huarache"};
+             _itemRepository.Setup(m => m.GetItem(_item.Name))
+                .Returns(_item);
+            //act
             _processor.InsertItem(request);
+            //assert
             itemInsertRepositoryMock.Verify(m => m.Save(It.IsAny<ItemInsert>()), Times.Never);
         }
     }

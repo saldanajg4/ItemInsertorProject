@@ -86,9 +86,17 @@ namespace ItemInsertor.Core.Tests
         [Fact]
         public void ShouldNotInsertIfItemFoundByName(){
             //arrange
-             _item = new Item{Name = "huarache"};
+             _item = new Item{
+                Sku = "hua0asdfsdfsdfg01",
+                Name = "huarache",
+                Quantity = 2,
+                Price = 10.00
+            };
+            //when the GetItem(name) return item, then save method is not called and our test 
+            //passes
              _itemRepository.Setup(m => m.GetItem(_item.Name))
-                .Returns(_item);
+                .Returns(_item);//this returns Name = "huarache" and the GetItem()
+                    //in processor returns Item with request Name = "huarache" so finds it
             //act
             _processor.InsertItem(request);
             //assert

@@ -21,16 +21,17 @@ namespace ItemInsertor.Core.Processor
             if (request == null)
                 throw new ArgumentNullException(nameof(request));
             var item = this.itemRepository.GetItem(request.Name.ToLower());
-            if (item == null){
-                InsertRepository.Save(new ItemInsert{
-                Sku = request.Sku,
-                Name = request.Name,
-                Price = request.Price,
-                Quantity = request.Quantity
-            });
+            if (item == null)
+            {
+                InsertRepository.Save(CreateItem<ItemInsert>(request));
             }
-            
-            return new InsertItemResult
+
+            return CreateItem<InsertItemResult>(request);
+        }
+
+        private static T CreateItem<T>(ItemInsertRequest request) where T : ItemInsertBase, new()
+        {
+            return new T
             {
                 Sku = request.Sku,
                 Name = request.Name,

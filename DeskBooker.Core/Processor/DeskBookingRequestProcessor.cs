@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using DeskBooker.Core.DataInterface;
 using DeskBooker.Core.Domain;
 
@@ -7,18 +9,23 @@ namespace DeskBooker.Core.Processor
     public class DeskBookingRequestProcessor
     {
         private readonly IDeskBookingRepository deskBookingRepository;
+        private readonly IDeskRepository deskRepository;
 
-        public DeskBookingRequestProcessor(IDeskBookingRepository deskBookingRepository)
+        public DeskBookingRequestProcessor(IDeskBookingRepository deskBookingRepository,
+            IDeskRepository deskRepository)
         {
+            this.deskRepository = deskRepository;
             this.deskBookingRepository = deskBookingRepository;
         }
 
+        //From the IEnumerable variable use Count() linq methodks
         public BookDeskResult BookDesk(BookDeskRequest bookRequest)
         {
             if (bookRequest == null)
                 throw new ArgumentNullException(nameof(bookRequest));
-
-            deskBookingRepository.Save(CreateDeskBookDomain<DeskBooking>(bookRequest));
+            var availableDesks = deskRepository.GetAvailableDesks(bookRequest.BookingDate);
+            if(availableDesks.Count() > 0)
+                deskBookingRepository.Save(CreateDeskBookDomain<DeskBooking>(bookRequest));
             return CreateDeskBookDomain<BookDeskResult>(bookRequest);
         }
 

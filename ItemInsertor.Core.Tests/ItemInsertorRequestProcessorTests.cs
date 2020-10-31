@@ -11,19 +11,27 @@ namespace ItemInsertor.Core.Tests
     public class ItemInsertorRequestProcessorTests
     {
         private readonly ItemInsertRequest request;
+        private Item _item;
+        private readonly Mock<IItemRepository> _itemRepository;
         private readonly Mock<IItemInsertRepository> itemInsertRepositoryMock;
         private ItemInsertorRequestProcessor _processor;
         public ItemInsertorRequestProcessorTests()
         {
             request = new ItemInsertRequest
             {
-                Sku = "Hua001",
-                Name = "Huarache",
+                Sku = "hua001",
+                Name = "huarache",
                 Quantity = 2,
                 Price = 10.00
             };
+           _item = null;
+            _itemRepository = new Mock<IItemRepository>();
             itemInsertRepositoryMock = new Mock<IItemInsertRepository>();
-            _processor = new ItemInsertorRequestProcessor(itemInsertRepositoryMock.Object);
+            //how to test if item does not exist
+            _itemRepository.Setup(m => m.GetItem(_item.Name))
+                .Returns(_item);
+            _processor = new ItemInsertorRequestProcessor(itemInsertRepositoryMock.Object,
+                _itemRepository.Object);
         }
         //first test is the ItemInsertorRequestProcessor()
         [Fact]
@@ -73,6 +81,13 @@ namespace ItemInsertor.Core.Tests
             Assert.Equal(request.Name, itemInserted.Name);
             Assert.Equal(request.Price, itemInserted.Price);
             Assert.Equal(request.Quantity, itemInserted.Quantity);
+        }
+        //Mocking the IItemRepository when item exists then do not save
+        [Fact]
+        public void ShouldNotInsertIfItemFoundByName(){
+             _item = new Item{Name = request.Name};
+            _processor.InsertItem(request);
+            itemInsertRepositoryMock.Verify(m => m.Save(It.IsAny<ItemInsert>()), Times.Never);
         }
     }
 

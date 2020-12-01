@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\users\\gabriel\\vsprojects\\ItemInsertorProject\\ItemInsertor.Core\\ItemInsertor.Core.csproj": {}
+    "d:\\Users\\gabriel\\vsprojects\\ItemInsertorProject\\ItemInsertor.Core\\ItemInsertor.Core.csproj": {}
   },
   "projects": {
-    "D:\\users\\gabriel\\vsprojects\\ItemInsertorProject\\ItemInsertor.Core\\ItemInsertor.Core.csproj": {
+    "d:\\Users\\gabriel\\vsprojects\\ItemInsertorProject\\ItemInsertor.Core\\ItemInsertor.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\users\\gabriel\\vsprojects\\ItemInsertorProject\\ItemInsertor.Core\\ItemInsertor.Core.csproj",
+        "projectUniqueName": "d:\\Users\\gabriel\\vsprojects\\ItemInsertorProject\\ItemInsertor.Core\\ItemInsertor.Core.csproj",
         "projectName": "ItemInsertor.Core",
-        "projectPath": "D:\\users\\gabriel\\vsprojects\\ItemInsertorProject\\ItemInsertor.Core\\ItemInsertor.Core.csproj",
+        "projectPath": "d:\\Users\\gabriel\\vsprojects\\ItemInsertorProject\\ItemInsertor.Core\\ItemInsertor.Core.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\users\\gabriel\\vsprojects\\ItemInsertorProject\\ItemInsertor.Core\\obj\\",
+        "outputPath": "d:\\Users\\gabriel\\vsprojects\\ItemInsertorProject\\ItemInsertor.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

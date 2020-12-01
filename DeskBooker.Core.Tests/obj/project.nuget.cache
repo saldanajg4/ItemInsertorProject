@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UGYW9ODTAHsryKNBJemg3M65/mlAMAXsaJitKHIs1q/iAa/Rd/Tt73+hhHIXwzAkbXzRVUKinNWmRcVGh5UPZw==",
+  "dgSpecHash": "TBvsj7hwLdbC/vMJH7kiN50Ll0hP+y9Fu7XZwAv3vmSm1lQTbsTx6E73xN6y8Gv1sdgmpgR/DoH8vsxPiHdJGg==",
   "success": true,
-  "projectFilePath": "D:\\users\\gabriel\\vsprojects\\ItemInsertorProject\\DeskBooker.Core.Tests\\DeskBooker.Core.Tests.csproj",
+  "projectFilePath": "d:\\Users\\gabriel\\vsprojects\\ItemInsertorProject\\DeskBooker.Core.Tests\\DeskBooker.Core.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",

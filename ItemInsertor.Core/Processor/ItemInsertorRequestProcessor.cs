@@ -23,7 +23,8 @@ namespace ItemInsertor.Core.Processor
             var item = this.itemRepository.GetItem(request.Name.ToLower());
             if (item == null)
             {
-                InsertRepository.Save(CreateItem<ItemInsert>(request));
+                var itemToInsert = CreateItem<ItemInsert>(request);
+                InsertRepository.Save(itemToInsert);
             }
 
             return CreateItem<InsertItemResult>(request);

@@ -18,14 +18,24 @@ namespace DeskBooker.Core.Processor
             this.deskBookingRepository = deskBookingRepository;
         }
 
-        //From the IEnumerable variable use Count() linq methodks
+        //From the IEnumerable variable use Count() linq method
+        //bookRequest is like my Dto, the DeskBooking object is like my entity
+        //to be saved into the database
+        //the test fails when availableDesks is not setting the DeskId
         public BookDeskResult BookDesk(BookDeskRequest bookRequest)
         {
             if (bookRequest == null)
                 throw new ArgumentNullException(nameof(bookRequest));
             var availableDesks = deskRepository.GetAvailableDesks(bookRequest.BookingDate);
-            if(availableDesks.Count() > 0)
-                deskBookingRepository.Save(CreateDeskBookDomain<DeskBooking>(bookRequest));
+            //creates a relationship between first available desk(Desk) using Id
+            // and the DeskBooking using DeskId
+            if(availableDesks.FirstOrDefault() is Desk availableDesk){
+                // var availableDesk = availableDesks.First();
+                var deskBooking = CreateDeskBookDomain<DeskBooking>(bookRequest);
+                deskBooking.DeskId = availableDesk.Id;
+                deskBookingRepository.Save(deskBooking);
+            }
+                
             return CreateDeskBookDomain<BookDeskResult>(bookRequest);
         }
 

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using DeskBooker.Core.DataInterface;
 using DeskBooker.Core.Domain;
 using DeskBooker.Core.Processor;
@@ -21,11 +22,12 @@ namespace DeskBooker.Core.Tests
                 FistName = "Jose",
                 LastName = "Saldana",
                 Email = "saldanajg4@hotmail.com",
-                BookingDate = new DateTime(2020,10,29)
+                BookingDate = new DateTime(2020,10,29),
             };
-            //pretend there are some available desks
+            //pretend there are some available desks in the database, so this is the one that 
+            //needs the DeskId
             _availableDesks = new List<Desk>{
-                new Desk()
+                new Desk{ Id = 7}
             };
             _deskBookingRepositoryMock= new Mock<IDeskBookingRepository>();
             _DesksRepositoryMock = new Mock<IDeskRepository>();
@@ -39,7 +41,7 @@ namespace DeskBooker.Core.Tests
             //arrange
             
             
-            //act
+            //actks
             BookDeskResult result = processor.BookDesk(request);
             
             //assert
@@ -71,6 +73,8 @@ namespace DeskBooker.Core.Tests
                 });
             //act - verify that Save() is called once in processor.BookDesk
             processor.BookDesk(request);
+            //DeskBooking does not contain DeskId yet, that will be for Desk entity
+            //Verigying the Save() takes a DeskBooking parameter to be saved and called once
             _deskBookingRepositoryMock.Verify(m => m.Save(It.IsAny<DeskBooking>()),Times.Once);
 
             //assert
@@ -79,6 +83,9 @@ namespace DeskBooker.Core.Tests
             Assert.Equal(request.LastName, savedDeskBooking.LastName);
             Assert.Equal(request.Email, savedDeskBooking.Email);
             Assert.Equal(request.BookingDate, savedDeskBooking.BookingDate);
+            //now add the deskId to DeskBooking object to be saved
+            //fails because not set in the savedDeskBooking object
+            Assert.Equal(_availableDesks.First().Id, savedDeskBooking.DeskId);
         }
 
         //call BookDesk(request) from the processor, then verify that Save() was never called
@@ -88,6 +95,16 @@ namespace DeskBooker.Core.Tests
             processor.BookDesk(request);
             _deskBookingRepositoryMock.Verify(m => m.Save(It.IsAny<DeskBooking>()),Times.Never);
 
+        }
+
+        [Theory]
+        [InlineData(DeskBookingResultCode.Success,true)]
+        [InlineData(DeskBookingResultCode.NoDeskAvailable,false)]
+        public void ShouldReturnExpectedResultCode(DeskBookingResultCode expectedResultCode,
+            bool isDeskAvailable){
+                if(!isDeskAvailable){
+                    _availableDesks.Clear();
+                }
         }
 
     }

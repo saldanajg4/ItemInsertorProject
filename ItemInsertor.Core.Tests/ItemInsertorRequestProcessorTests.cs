@@ -68,6 +68,13 @@ namespace ItemInsertor.Core.Tests
         public void ShouldSaveItem(){
             //arrange
             ItemInsert itemInserted = null;
+            _item = new Item{
+                Sku = "hua001",
+                Name = "huarache",
+                Quantity = 2,
+                Price = 10.00,
+                // Id = 7
+            };
             itemInsertRepositoryMock.Setup(m => m.Save(It.IsAny<ItemInsert>()))
                 .Callback<ItemInsert>(itemInsertedBack => {
                     itemInserted = itemInsertedBack;
@@ -81,13 +88,16 @@ namespace ItemInsertor.Core.Tests
             Assert.Equal(request.Name, itemInserted.Name);
             Assert.Equal(request.Price, itemInserted.Price);
             Assert.Equal(request.Quantity, itemInserted.Quantity);
+            //since it's not creating a relationship with any other class, so 
+            //it's not needed itemInserted.ItemId yet.
+            // Assert.Equal(_item.Id, itemInserted.ItemId);
         }
         //Mocking the IItemRepository when item exists then do not save
         [Fact]
         public void ShouldNotInsertIfItemFoundByName(){
             //arrange
              _item = new Item{
-                Sku = "hua0asdfsdfsdfg01",
+                Sku = "hua001",
                 Name = "huarache",
                 Quantity = 2,
                 Price = 10.00

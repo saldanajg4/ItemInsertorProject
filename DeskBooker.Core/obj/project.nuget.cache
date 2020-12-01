@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rsYxoCpiaFJdruZM+00cbm9KzRjd7EhJL3VPV3GIf8q3qsa/nVvyLeXMu2A4lHz8KdDOQIG/eiul9tQ4upuBAg==",
+  "dgSpecHash": "Nm6Lb5H5wzEem1aIlIReD/LxovEDsZ9yZIbBFOATYqjiYv6PW6BA0gSnJX6ZKupCHwCIiosrXVAhi5BBj1kw/w==",
   "success": true,
-  "projectFilePath": "D:\\users\\gabriel\\vsprojects\\ItemInsertorProject\\DeskBooker.Core\\DeskBooker.Core.csproj",
+  "projectFilePath": "d:\\Users\\gabriel\\vsprojects\\ItemInsertorProject\\DeskBooker.Core\\DeskBooker.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kczKyxtC0Jb9V2ZBILcHk1oE4AVKU8G5HaImRN+rjBqASTyZqvHhOFgWddRILWnWgmLjsPkd/9WHAy9fJoKRuw==",
+  "dgSpecHash": "5xGitUtvEbFAtbueaA79yGHO+hzPTWodSN59Z5QbZFkOZqSxUYN04NshuosQ6D0rzd/u7QNs+ymi3HNrx7+Jew==",
   "success": true,
-  "projectFilePath": "D:\\users\\gabriel\\vsprojects\\ItemInsertorProject\\ItemInsertor.Core.Tests\\ItemInsertor.Core.Tests.csproj",
+  "projectFilePath": "d:\\Users\\gabriel\\vsprojects\\ItemInsertorProject\\ItemInsertor.Core.Tests\\ItemInsertor.Core.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
